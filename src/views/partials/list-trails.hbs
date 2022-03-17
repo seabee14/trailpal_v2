@@ -1,0 +1,33 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>County</th>
+      <th>Latt</th>
+      <th>Long</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each traillist.trails}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{county}}
+        </td>
+        <td>
+          {{latt}}
+        </td>
+        <td>
+          {{long}}
+        </td>
+        <td>
+          <a href="/traillist/{{../traillist._id}}/deletetrail/{{_id}}" class="ui icon button">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
