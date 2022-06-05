@@ -18,4 +18,5 @@ export const webRoutes = [
   { method: "POST", path: "/dashboard/addtraillist", config: dashboardController.addTraillist },
   { method: "GET", path: "/dashboard/deletetraillist/{id}", config: dashboardController.deleteTraillist },
   { method: "GET", path: "/traillist/{id}/deletetrail/{trailid}", config: traillistController.deleteTrail },
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
 ];
